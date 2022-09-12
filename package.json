@@ -1,6 +1,5 @@
 {
-  "name": "@immutabl3/animejs",
-  "private": true,
+  "name": "@immutabl3/anime",
   "version": "3.2.1",
   "homepage": "https://github.com/immutabl3/anime",
   "repository": "immutabl3/anime",
