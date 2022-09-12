@@ -306,7 +306,7 @@ class Anime {
           // const a = strings[s];
           const b = strings[s + 1];
           const n = numbers[s];
-          if (!isNaN(n)) {
+          if (!Number.isNaN(n)) {
             if (!b) {
               progress += `${n} `;
             } else {
