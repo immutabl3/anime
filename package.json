@@ -1,23 +1,16 @@
 {
-  "name": "animejs",
+  "name": "@immutabl3/animejs",
+  "private": true,
   "version": "3.2.1",
-  "homepage": "http://animejs.com",
-  "repository": "juliangarnier/anime",
+  "homepage": "https://github.com/immutabl3/anime",
+  "repository": "immutabl3/anime",
   "description": "JavaScript animation engine",
-  "umd:main": "lib/anime.min.js",
-  "module": "lib/anime.es.js",
-  "main": "lib/anime.js",
-  "umd:name": "anime",
+  "main": "src/index.js",
   "license": "MIT",
-  "author": "Julian Garnier <hello@julian.gr>",
-  "files": [
-    "lib"
-  ],
-  "scripts": {
-    "build": "node build"
-  },
+  "author": "Immutable <joe@weareimmutable.com>",
+  "scripts": {},
   "bugs": {
-    "url": "https://github.com/juliangarnier/anime/issues"
+    "url": "https://github.com/immutabl3/anime/issues"
   },
   "keywords": [
     "anime",
@@ -28,11 +21,7 @@
     "SVG",
     "canvas"
   ],
-  "devDependencies": {
-    "gzip-size": "^4.1.0",
-    "pretty-bytes": "^4.0.2",
-    "rollup": "^0.53.2",
-    "rollup-plugin-buble": "^0.18.0",
-    "uglify-js": "^3.3.4"
+  "dependencies": {
+    "@immutabl3/utils": "^1.1.3"
   }
 }

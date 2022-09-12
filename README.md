@@ -1,3 +1,14 @@
+### An updated anime implementation to address specific issues:
+- `seek` to `0` or initial state did not set initial state or fire updates. code was commented out to allow this, but side effects are currently unknown
+- centralization of `requestAnimationFrame` calls weren't exposed to sync with other calls. `anime` no longer starts itself; it needs to be ticked by an outside `requestAnimationFrame` loop (by importing `engine`)
+- object mutations were deoptimizing several key processes in Safari, causing slowdowns and hiccups. these were fixed by using better defaults and pulling out object creation
+- `reduce` loops were causing general deoptimizing in browsers, seemingly randomly. these `reduce`s were to perform array flattening (now replaced with `.flat()`) and sorting and have been replaced or removed
+- functional loops (e.g. `forEach`), though nice, were creating functions-in-loops deeply. these have been addressed where possible to avoid function creation and reduce spikes in garbage collection
+- initialization of many animations was very slow. the central `anime` call and other encapsulations have been turned into pure functions and/or classes
+- substituted `Map` & `Set` where possible to reduce loop work-arounds/indexOf/includes checks
+- heavier parts of the library can now be tree shaked when not imported/used
+- general modernization of the library
+
 <h1 align="center">
   <a href="https://animejs.com"><img src="/documentation/assets/img/animejs-v3-header-animation.gif" width="250"/></a>
   <br>
