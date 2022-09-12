@@ -4,7 +4,7 @@ import Timeline from './timeline.js';
 import Engine from './engine.js';
 import {
   uniqueId,
-} from '@immutabl3/utils.js';
+} from '@immutabl3/utils';
 import {
   setProgressValue,
 } from './tweens.js';
