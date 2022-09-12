@@ -31,8 +31,8 @@ const normalizeTweenValues = (tween, animatable) => {
     }
     t[key] = value;
   }
-  t.duration = parseFloat(tween.duration);
-  t.delay = parseFloat(tween.delay);
+  t.duration = parseFloat(t.duration);
+  t.delay = parseFloat(t.delay);
   return t;
 };
 
