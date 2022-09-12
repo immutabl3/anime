@@ -2,10 +2,10 @@ import {
   isPth,
   isSvg,
   isColor,
-} from './utils';
+} from './utils.js';
 import {
   getUnit,
-} from './units';
+} from './units.js';
 import {
   parseEasings,
 } from './easing.js';
