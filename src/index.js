@@ -4,7 +4,7 @@ import Timeline from './timeline.js';
 import Engine from './engine.js';
 import {
   uniqueId,
-} from '@immutabl3/utils';
+} from '@immutabl3/utils.js';
 import {
   setProgressValue,
 } from './tweens.js';
@@ -274,7 +274,7 @@ class Anime {
       // only check for keyframes if there is more than one tween
       if (tweenLength) tween = tweens.filter(t => (insTime < t.end))[0] || tween;
       const elapsed = minMax(insTime - tween.start - tween.delay, 0, tween.duration) / tween.duration;
-      const eased = Number.isNaN(elapsed) ? 1 : tween.easing(elapsed);
+      const eased = isNaN(elapsed) ? 1 : tween.easing(elapsed);
       const strings = tween.to.strings;
       const round = tween.round;
       const numbers = [];
@@ -306,7 +306,7 @@ class Anime {
           // const a = strings[s];
           const b = strings[s + 1];
           const n = numbers[s];
-          if (!Number.isNaN(n)) {
+          if (!isNaN(n)) {
             if (!b) {
               progress += `${n} `;
             } else {
