@@ -1,11 +1,12 @@
 {
   "name": "@immutabl3/anime",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "homepage": "https://github.com/immutabl3/anime",
   "repository": "immutabl3/anime",
   "description": "JavaScript animation engine",
   "main": "src/index.js",
   "license": "MIT",
+  "type": "module",
   "author": "Immutable <joe@weareimmutable.com>",
   "scripts": {},
   "bugs": {
