@@ -19,6 +19,7 @@ import {
 } from './maths.js';
 
 const normalizeTweenValues = (tween, animatable) => {
+  const t = {};
   for (const key in tween) {
     let value = getFunctionValue(tween[key], animatable);
     if (Array.isArray(value)) {
@@ -28,11 +29,11 @@ const normalizeTweenValues = (tween, animatable) => {
       }
       value = arr.length === 1 ? arr[0] : arr;
     }
-    tween[key] = value;
+    t[key] = value;
   }
-  tween.duration = parseFloat(tween.duration);
-  tween.delay = parseFloat(tween.delay);
-  return tween;
+  t.duration = parseFloat(tween.duration);
+  t.delay = parseFloat(tween.delay);
+  return t;
 };
 
 export const normalizeTweens = (prop, animatable) => {
