@@ -1,6 +1,16 @@
-import { dequal } from 'dequal';
 import { useRef, useEffect } from 'react';
 import { anime, remove, set } from '../src/index.js';
+
+// shallow equality check
+const isEqual = (obj1, obj2) => {
+  if (Object.keys(obj1).length !== Object.keys(obj2).length) return false;
+  
+  for (const key in obj1) {
+    if (obj1[key] !== obj2[key]) return false;
+  }
+
+  return true;
+};
 
 const animatables = new Set([
   'translateX',
@@ -82,7 +92,7 @@ export const useAnime = function(config) {
   // track changes
   const configRef = useRef(config);
 
-  const hasChanged = !dequal(configRef.current, config);
+  const hasChanged = !isEqual(configRef.current, config);
   if (hasChanged) configRef.current = config;
   
   useEffect(() => {

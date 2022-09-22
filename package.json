@@ -1,6 +1,6 @@
 {
   "name": "@immutabl3/anime",
-  "version": "3.2.10",
+  "version": "3.2.11",
   "homepage": "https://github.com/immutabl3/anime",
   "repository": "immutabl3/anime",
   "description": "JavaScript animation engine",
@@ -22,7 +22,6 @@
     "canvas"
   ],
   "dependencies": {
-    "@immutabl3/utils": "^1.1.3",
-    "dequal": "^2.0.3"
+    "@immutabl3/utils": "^1.1.3"
   }
 }
